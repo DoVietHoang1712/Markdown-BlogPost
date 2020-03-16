@@ -1,8 +1,9 @@
 const express = require('express')
 const Article = require('./../models/article')
 const router = express.Router()
-
+const {User, Verify} = require('../models/user');
 router.get('/new', (req, res) => {
+  console.log(req.session);
   res.render('articles/new', { article: new Article() })
 })
 

@@ -10,7 +10,12 @@
 <body>
   <div class="container">
     <h1 class="mb-4">Blog Articles</h1>
-    <a href="/articles/new" class="btn btn-success">New Article</a>
+    <div class="row">
+      <a href="/articles/new" class="btn btn-success">New Article</a>
+      <a href="/users/register" class="btn btn-info ml-5">Register</a>
+      <a href="/users/login" class="btn btn-success ml-5">Login</a>
+    </div>
+    
 
     <% articles.forEach(article => { %>
       <div class="card mt-4">

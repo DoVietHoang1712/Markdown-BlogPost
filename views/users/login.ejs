@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mb-4">Login</h1>
+
+        <form action="/users/login" method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" required value="<%= user.email %>" name="email" id="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" required value="<%= user.password %>" name="password" id="password"
+                    class="form-control">
+            </div>
+            <button type='submit' class="btn btn-secondary">Login</button>
+            <a href="/users/register" class="btn btn-primary">Register</a>
+        </form>
+    </div>
+</body> 
+
+</html>

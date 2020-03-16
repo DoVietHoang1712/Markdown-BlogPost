@@ -29,7 +29,8 @@ const articleSchema = new mongoose.Schema({
   sanitizedHtml: {
     type: String,
     required: true
-  }
+  },
+  author: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 })
 
 articleSchema.pre('validate', function(next) {
